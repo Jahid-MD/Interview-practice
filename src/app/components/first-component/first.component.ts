@@ -5,6 +5,7 @@ import { HiddenDirective } from "../../directive/hidden.directive";
 import { CapitalizePipe } from "../../pipes/capitalize.pipe";
 import { RepeatPipe } from "../../pipes/repeat.pipe";
 import { capitalizeArray } from "../../pipes/purePipe.pipe";
+import { ParentComponent } from "../parent/parent.component";
 
 @Component({
     template:`
@@ -17,9 +18,10 @@ import { capitalizeArray } from "../../pipes/purePipe.pipe";
         @for (value of arr | capitalizeArray; track  value) {
             <p>{{value}}</p>
         }
+        <app-parent></app-parent>
         `,
     selector:"app-first-component",
-    imports:[FormsModule, HighlightDirective, HiddenDirective,CapitalizePipe, RepeatPipe, capitalizeArray],
+    imports:[FormsModule, HighlightDirective, HiddenDirective,CapitalizePipe, RepeatPipe, capitalizeArray,ParentComponent],
     standalone:true
 })
 export class FirstComponent {
