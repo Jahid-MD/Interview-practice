@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { ModOneComponent } from "../components/first-component/components/mod-one.component";
+import { ModOneComponent } from "./components/mod-one.component";
 
 @NgModule({
     declarations: [ModOneComponent],
